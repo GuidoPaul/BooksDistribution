@@ -1,7 +1,7 @@
 <!--#include file = "conn.asp"-->
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<title>For</title>
 	</head>
 
@@ -38,38 +38,22 @@
 			end Function
 
 			if S_Magor = "" or S_Class_str = "" then
-			%>
-				<script language="vbscript">
-					alert("学生专业或班级不能为空")
-					history.back()
-				</script>
-			<%
+				response.write("<script>alert('学生的专业或班级不能为空')</script>")  '经测试，偶数个字时不会显示乱码'
+				response.write("<script>history.back()</script>")
 			elseif Password = "" then
-			%>
-				<script language="vbscript">
-					alert("管理员密码不能为空")
-					history.back()
-				</script>
-			<%
+				response.write("<script>alert('管理员的密码不能为空')</script>")
+				response.write("<script>history.back()</script>")
 			elseif check = false then
-			%>
-				<script language="vbscript">
-					alert("学生专业或班级输入错误")
-					history.back()
-				</script>
-			<%
+				response.write("<script>alert('学生专业或班级输入有错误')</script>")
+				response.write("<script>history.back()</script>")
 			else
 				if rs.Fields("M_Password") = Password then
 					Session("S_Magor") = S_Magor
 					Session("S_Class") = S_Class_str
 					response.redirect "select.asp"
 				else
-				%>
-					<script language="vbscript">
-						alert("管理员密码错误！")
-						history.back()
-					</script>
-				<%
+					response.write("<script>alert('管理员的密码有误')</script>")
+					response.write("<script>history.back()</script>")
 				end if
 			end if
 		%>
