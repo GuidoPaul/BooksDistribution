@@ -1,0 +1,74 @@
+html {
+	height:100%;
+}
+
+body {
+	height:100%;
+	margin:0px;
+	padding:0px;
+	font:12px Arial,宋体;
+	text-align:center;
+}
+
+#container {
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	text-align:left;
+}
+
+#header {
+	float:left;
+	width:100%;
+	height:720px;
+	background:url(../images/shark.jpg);
+}
+
+#main {
+	float:left;
+	width:100%;
+	height:360px;
+}
+
+	#main #lbox {
+		float:left;
+		width:480px;
+		height:100%;
+		background:url(../images/kitty.jpg);
+	}
+
+	#main #rbox {
+		float:left;
+		width:480px;
+		height:100%;
+		background:red;
+	}
+		#rbox table {
+			border: 0;
+			width:100%;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top: 100px;
+		}
+		#rbox .td1 {
+			width: 100px;
+			text-align: right;
+		}
+		#rbox .td2 {
+			width:200px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		#rbox .tt {
+			text-align:center;
+		}
+
+#footer {
+	float:left;
+	width:100%;
+	height:50px;
+}
+	#footer .copyright {
+		text-align:right;
+	}
