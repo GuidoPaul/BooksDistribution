@@ -15,10 +15,11 @@
 		rs.open sql, conn
 
 		Set rs2 = server.CreateObject("ADODB.Recordset")
-		sql2 = "Select * from Class"
+		sql2 = "Select C_Number from Class where C_Magor = '" & S_Magor & "'"
 		rs2.open sql2, conn
 		C_Number = rs2("C_Number")
 		Session("C_Number") = C_Number
+
 
 		Set rs3 = server.CreateObject("ADODB.Recordset")
 		sql3 = "Select * from Book where B_ClassID = '" & Trim(S_ClassID) & "'"

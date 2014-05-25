@@ -37,6 +37,9 @@
 				check = flag
 			end Function
 
+			'浏览器端运行代码: '
+			'response.write("<script></script>")可以在firefox下运行'
+			'<script language="vbscript"></script>不行'
 			if S_Magor = "" or S_Class_str = "" then
 				response.write("<script>alert('学生的专业或班级不能为空')</script>")  '经测试，偶数个字时不会显示乱码'
 				response.write("<script>history.back()</script>")
